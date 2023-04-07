@@ -31,8 +31,6 @@ function playRound(playerSelection, computerSelection) {
     return 'computer';
   }
 }
-
-
    const rockBtn = document.getElementById('.rock');
    const paperBtn = document.getElementById('.paper');
    const scissorsBtn = document.getElementById('.scissors');
@@ -60,7 +58,7 @@ function playRound(playerSelection, computerSelection) {
   }
   
   function updateResult(){
-    const resultEl = document.getElementById('result');
+    const resultEl = document.getElementById('#result');
     if (roundWinner === 'player'){
         resultEl.textContent = 'You won'
     } else if (roundWinner === 'computer'){
