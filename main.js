@@ -31,6 +31,7 @@ function playRound(playerSelection, computerSelection) {
     return 'computer';
   }
 }
+
 const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
@@ -68,15 +69,17 @@ function updateResultText(){
   }
 }
 
-function updateChoices(playerSelection, computerSelection){
-  
-  switch(playerSelection){
-    case 'rock':
-      playerChoiceElement.textContent = '✊';
-      break;
-    case 'paper':
-      playerChoiceElement.textContent = '✋';
-      break;
-    case 'scissors':
+function isGameOver() {
+  return (playerScore === 5 || computerScore === 5);
+}
+
+function endGame() {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(button => button.disabled = true);
+  const resultEl = document.getElementById('result');
+  if (playerScore > computerScore) {
+    resultEl.textContent = 'You won the game!';
+  } else {
+    resultEl.textContent = 'Computer won the game!';
   }
 }

@@ -1,0 +1,69 @@
+body {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  
+  h1 {
+    color: #fff;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  button {
+    background-color: #222;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #fff;
+    color: #222;
+  }
+  
+  #player-score,
+  #computer-score,
+  #result,
+  #player-choice,
+  #computer-choice {
+    font-size: 2em;
+  }
+  
+  #result {
+    font-weight: bold;
+  }
+  
+  #player-choice,
+  #computer-choice {
+    font-size: 4em;
+    margin-right: 10px;
+  }
+  
+  #player-choice:after {
+    content: "";
+  }
+  
+  #player-choice:before,
+  #computer-choice:before {
+    font-size: 0.5em;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  #player-choice:before {
+    content: "You: ";
+  }
+  
+  #computer-choice:before {
+    content: "Computer: ";
+  }
+  
+  #game-container {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
