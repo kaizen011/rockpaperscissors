@@ -1,69 +1,61 @@
 body {
-    background-color: #2b2b2b;
+    background-color: #222;
     color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    border: 1px solid #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   h1 {
-    color: #fff;
+    margin-top: 0;
   }
   
   p {
-    margin-bottom: 1em;
+    margin: 0;
+    margin-bottom: 10px;
   }
   
-  button {
-    background-color: #222;
-    border: 2px solid #fff;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #fff;
-    color: #222;
-  }
-  
-  #player-score,
-  #computer-score,
-  #result,
-  #player-choice,
-  #computer-choice {
+  #player-score, #computer-score {
     font-size: 2em;
   }
   
+  #player-choice, #computer-choice {
+    font-size: 5em;
+    margin-top: 10px;
+  }
+  
   #result {
-    font-weight: bold;
+    font-size: 3em;
+    margin-top: 20px;
   }
   
-  #player-choice,
-  #computer-choice {
-    font-size: 4em;
-    margin-right: 10px;
+  button {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid #333;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
   }
   
-  #player-choice:after {
-    content: "";
+  button:hover {
+    background-color: #666;
   }
   
-  #player-choice:before,
-  #computer-choice:before {
-    font-size: 0.5em;
-    margin-right: 5px;
-    vertical-align: middle;
+  .choice {
+    width: 100px;
+    text-align: center;
   }
-  
-  #player-choice:before {
-    content: "You: ";
-  }
-  
-  #computer-choice:before {
-    content: "Computer: ";
-  }
-  
-  #game-container {
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  

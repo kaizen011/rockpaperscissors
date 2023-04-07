@@ -40,16 +40,18 @@ rockBtn.addEventListener('click', () => choice('rock'));
 paperBtn.addEventListener('click', () => choice('paper'));
 scissorsBtn.addEventListener('click', () => choice('scissors'));
 
-function choice(playerSelection){
+function choice(playerSelection) {
   const computerSelection = computerChoice();
-  roundWinner = playRound(playerSelection,computerSelection);
+  roundWinner = playRound(playerSelection, computerSelection);
   updateScores();
-  if(isGameOver()){
+  updateChoices(playerSelection, computerSelection);
+  if (isGameOver()) {
     endGame();
-  }else {
+  } else {
     updateResultText();
   }
 }
+
 
 function updateScores() {
   const playerScoreEl = document.getElementById('player-score');
@@ -81,5 +83,34 @@ function endGame() {
     resultEl.textContent = 'You won the game!';
   } else {
     resultEl.textContent = 'Computer won the game!';
+  }
+}
+
+function updateChoices(playerSelection, computerSelection) {
+  const playerChoiceEl = document.getElementById('player-choice');
+  const computerChoiceEl = document.getElementById('computer-choice');
+  
+  switch (playerSelection) {
+    case 'rock':
+      playerChoiceEl.textContent = '✊';
+      break;
+    case 'paper':
+      playerChoiceEl.textContent = '✋';
+      break;
+    case 'scissors':
+      playerChoiceEl.textContent = '✌️';
+      break;
+  }
+  
+  switch (computerSelection) {
+    case 'rock':
+      computerChoiceEl.textContent = '✊';
+      break;
+    case 'paper':
+      computerChoiceEl.textContent = '✋';
+      break;
+    case 'scissors':
+      computerChoiceEl.textContent = '✌️';
+      break;
   }
 }

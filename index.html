@@ -6,13 +6,38 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <p>Player Score: <span id="player-score">0</span></p>
-    <p>Computer Score: <span id="computer-score">0</span></p>
-    <p>Result: <span id="result"></span></p>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <div class="scoreboard">
+        <div class="player-score">
+          <p>Player Score</p>
+          <p class="score" id="player-score">0</p>
+        </div>
+        <div class="computer-score">
+          <p>Computer Score</p>
+          <p class="score" id="computer-score">0</p>
+        </div>
+      </div>
+      <div class="game">
+        <div class="choices">
+          <div class="player-choice">
+            <p>Player choice: <span id="player-choice" class="choice"></span></p>
+          </div>
+          <div class="computer-choice">
+            <p>Computer choice: <span id="computer-choice" class="choice"></span></p>
+          </div>
+        </div>
+        <div class="result">
+          <p>Result</p>
+          <p class="result-text" id="result"></p>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
