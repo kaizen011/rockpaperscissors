@@ -53,8 +53,8 @@ function playRound(playerSelection, computerSelection) {
    }
 
    function updateScores() {
-    const playerScoreEl = document.getElementById('player-score');
-    const computerScoreEl = document.getElementById('computer-score');
+    const playerScoreEl = document.getElementById('#player-score');
+    const computerScoreEl = document.getElementById('#computer-score');
     playerScoreEl.textContent = playerScore;
     computerScoreEl.textContent = computerScore;
   }
