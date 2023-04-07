@@ -101,7 +101,7 @@ function updateChoices(playerSelection, computerSelection) {
       playerChoiceEl.textContent = '✌️';
       break;
   }
-  
+
   switch (computerSelection) {
     case 'rock':
       computerChoiceEl.textContent = '✊';
