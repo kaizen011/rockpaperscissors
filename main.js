@@ -94,8 +94,3 @@ function updateChoices(playerSelection, computerSelection){
       computerChoiceElement.textContent = '✌';
   }
 }
-
-function updateScores(){
-  playerScoreElement.textContent = playerScore;
-  computerScoreElement.textContent = computerScore;
-}
