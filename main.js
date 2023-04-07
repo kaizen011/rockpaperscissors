@@ -31,42 +31,42 @@ function playRound(playerSelection, computerSelection) {
     return 'computer';
   }
 }
-   const rockBtn = document.getElementById('.rock');
-   const paperBtn = document.getElementById('.paper');
-   const scissorsBtn = document.getElementById('.scissors');
+const rockBtn = document.getElementById('rock');
+const paperBtn = document.getElementById('paper');
+const scissorsBtn = document.getElementById('scissors');
 
-   rockBtn.addEventListener('click', () => choice('rock'));
-   rockBtn.addEventListener('click', () => choice('paper'));
-   rockBtn.addEventListener('click', () => choice('scissors'));
+rockBtn.addEventListener('click', () => choice('rock'));
+paperBtn.addEventListener('click', () => choice('paper'));
+scissorsBtn.addEventListener('click', () => choice('scissors'));
 
-   function choice(playerSelection){
-    const computerSelection = computerChoice();
-    roundWinner = playRound(playerSelection,computerSelection);
-    updateScores();
-    if(isGameOver()){
-        endGame();
-    }else {
-        updateResultText();
-    }
-   }
-
-   function updateScores() {
-    const playerScoreEl = document.getElementById('#player-score');
-    const computerScoreEl = document.getElementById('#computer-score');
-    playerScoreEl.textContent = playerScore;
-    computerScoreEl.textContent = computerScore;
+function choice(playerSelection){
+  const computerSelection = computerChoice();
+  roundWinner = playRound(playerSelection,computerSelection);
+  updateScores();
+  if(isGameOver()){
+    endGame();
+  }else {
+    updateResultText();
   }
-  
-  function updateResult(){
-    const resultEl = document.getElementById('#result');
-    if (roundWinner === 'player'){
-        resultEl.textContent = 'You won'
-    } else if (roundWinner === 'computer'){
-        resultEl.textContent === 'Computer won';
-    } else{
-        resultEl.textContent === 'Tie';
-    }
+}
+
+function updateScores() {
+  const playerScoreEl = document.getElementById('player-score');
+  const computerScoreEl = document.getElementById('computer-score');
+  playerScoreEl.textContent = playerScore;
+  computerScoreEl.textContent = computerScore;
+}
+
+function updateResultText(){
+  const resultEl = document.getElementById('result');
+  if (roundWinner === 'player'){
+    resultEl.textContent = 'You won'
+  } else if (roundWinner === 'computer'){
+    resultEl.textContent = 'Computer won';
+  } else{
+    resultEl.textContent = 'Tie';
   }
+}
 
 function updateChoices(playerSelection, computerSelection){
   
@@ -78,17 +78,5 @@ function updateChoices(playerSelection, computerSelection){
       playerChoiceElement.textContent = '✋';
       break;
     case 'scissors':
-      playerChoiceElement.textContent = '✌';
-  }
-  
-  switch (computerSelection) {
-    case 'rock':
-      computerChoiceElement.textContent = '✊';
-      break;
-    case 'paper':
-      computerChoiceElement.textContent = '✋';
-      break;
-    case 'scissors':
-      computerChoiceElement.textContent = '✌';
   }
 }
